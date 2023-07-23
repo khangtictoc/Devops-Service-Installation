@@ -41,6 +41,6 @@ echo "Whitelisting HTTP port (${HTTP_PORT:=80})for Gitlab"
 sudo firewall-cmd --permanent --add-port ${HTTP_PORT:=80}/tcp
 
 echo "Use 'docker logs -f gitlab' to monitor the process" 
-echo "When done. Try to check by 'curl localhost:HTTP_PORT' to see the output"
+echo "When done. Try to check by 'curl localhost:${HTTP_PORT:=80}' to see the output"
 
 
