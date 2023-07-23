@@ -1,2 +1,7 @@
-# Devops-Service-Installation_Gitlab-Jenkins-Nexus-SonarQube
-Script for installing devops services (Sonarqube, Jenkins, Gitlab, Nexus) for Centos
+# Devop Service Installation
+
+## CentOS 7
+
+Installing method
+- Gitlab: Docker image
+- Jenkins, Sonarqube, Nexus: Follow manual intructions from official site
