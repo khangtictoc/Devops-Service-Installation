@@ -4,4 +4,4 @@
 
 Installing method
 - Gitlab: Docker image
-- Jenkins, Sonarqube, Nexus: Follow manual intructions from official site
+- Jenkins, Sonarqube, Nexus: Follow manual intructions
