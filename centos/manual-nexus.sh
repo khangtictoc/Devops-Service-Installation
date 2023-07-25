@@ -17,6 +17,7 @@ java -version
 
 ./nexus-3.56.0-01/bin/nexus start &
 
+
 sudo systemctl stop firewalld
 
 echo "!!! ACCESS NEXUS AT PORT 8081 !!!"
