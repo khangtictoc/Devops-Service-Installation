@@ -10,11 +10,39 @@ sudo apt install openjdk-8-jdk-headless -y
 echo "#################### JAVA 8 INSTALLATION COMPLETED ##################"
 java -version
 
-# echo "export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.372.b07-1.el7_9.x86_64" >> ~/.bashrc 
-# source ~/.bashrc
-# echo $JAVA_HOME
+sudo useradd -m -d /home/nexus nexus
+sudo passwd nexus <<EOF 
+nexus
+nexus
+EOF
+
+sudo cp -r nexus-3.56.0-01 /home/nexus
+sudo chown -R nexus:nexus /home/nexus/nexus-3.56.0-01
+
+sudo -i <<EOF2
+cat <<EOF> /etc/systemd/system/nexus.service
+
+[Unit]
+Description=nexus service
+After=network.target
+ 
+[Service]
+Type=forking
+ExecStart=/home/nexus/nexus-3.56.0-01/bin/nexus start 
+ExecStop=/home/nexus/nexus-3.56.0-01/bin/nexus stop 
+User=nexus
+#If there are spaces, I would strings within quotes like above
+Restart=on-failure
+ 
+[Install]
+WantedBy=multi-user.target
+
+EOF
+EOF2
+
+sudo systemctl daemon-reload
+sudo systemctl start nexus
 
 
-./nexus-3.56.0-01/bin/nexus start &
 
 echo "!!! ACCESS NEXUS AT PORT 8081 !!!"
