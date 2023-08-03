@@ -4,14 +4,15 @@
 
 (Tested on CentOS 7) 
 
-Installing method
-- Gitlab: Docker image
-- Jenkins, Sonarqube, Nexus: Follow manual intructions
++ 1 VM setup Gitlab (Using docker)
++ 1 VM setup Jenkins, Docker, GCloud CLI (Manual)
++ 1 VM setup Nexus and SonarQube (Manual)
+
 
 ## Ubuntu 
 
 (Tested on Ubuntu 18.04) 
 
-Installing method
-- Gitlab: Docker image
-- Jenkins, Sonarqube, Nexus: Follow manual intructions
++ 1 VM setup Gitlab (Using docker)
++ 1 VM setup Jenkins, Docker, GCloud CLI (Manual)
++ 1 VM setup Nexus and SonarQube (Manual)
