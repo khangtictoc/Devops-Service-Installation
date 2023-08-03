@@ -63,7 +63,7 @@ Vagrant.configure("2") do |config|
     ubuntu_ctl.vm.box = "generic/ubuntu1804"
     
     # Pre-setup scripts
-    ubuntu_ctl.vm.provision "shell", path: "scripts/setup-dns.sh"
+    ubuntu_ctl.vm.provision "shell", path: "Initial_bash_script/setup-dns.sh"
 
     ubuntu_ctl.vm.provider "virtualbox" do |vb| 
       vb.name = "Ubuntu18 Ansible Controller"
@@ -79,7 +79,7 @@ Vagrant.configure("2") do |config|
     ubuntu_target_1.vm.box = "generic/ubuntu1804"
 
     # Pre-setup scripts
-    ubuntu_target_1.vm.provision "shell", path: "scripts/setup-dns.sh"
+    ubuntu_target_1.vm.provision "shell", path: "Initial_bash_script/setup-dns.sh"
 
     ubuntu_target_1.vm.provider "virtualbox" do |vb|
       vb.name = "Ubuntu18 Ansible Target Node 1"
@@ -95,7 +95,7 @@ Vagrant.configure("2") do |config|
     ubuntu_target_2.vm.box = "generic/ubuntu1804"
 
     # Pre-setup scripts
-    ubuntu_target_2.vm.provision "shell", path: "scripts/setup-dns.sh"
+    ubuntu_target_2.vm.provision "shell", path: "Initial_bash_script/setup-dns.sh"
 
     ubuntu_target_2.vm.provider "virtualbox" do |vb|
       vb.name = "Ubuntu18 Ansible Target Node 2"
@@ -111,7 +111,7 @@ Vagrant.configure("2") do |config|
     ubuntu_target_3.vm.box = "generic/ubuntu1804"
 
     # Pre-setup scripts
-    ubuntu_target_3.vm.provision "shell", path: "scripts/setup-dns.sh"
+    ubuntu_target_3.vm.provision "shell", path: "Initial_bash_script/setup-dns.sh"
 
     ubuntu_target_3.vm.provider "virtualbox" do |vb|
       vb.name = "Ubuntu18 Ansible Target Node 3"
