@@ -11,8 +11,11 @@ echo "[DONE] - INSTALL JENKINS"
 
 # Install Java
 sudo apt install openjdk-11-jdk-headless -y
-echo "[DONE] - INSTALL JAVA"
+echo "[DONE] - INSTALL JAVA 11"
 java -version
+
+echo "+++++++ SELECT JAVA VERSION TO INSTALL (JAVA 11 REQUIRED) +++++++"
+sudo update-alternatives --config java
 
 # Start jenkins service
 sudo systemctl enable jenkins

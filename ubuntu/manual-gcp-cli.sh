@@ -15,3 +15,4 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 
 echo "[3/3] - CHECK VERSION. DONE !!!"
 gcloud --version
+

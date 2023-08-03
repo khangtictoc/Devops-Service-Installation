@@ -40,6 +40,9 @@ sudo yum -y install ./jdk-17_linux-x64_bin.rpm
 echo "#################### JAVA 17 INSTALLATION COMPLETED ##################"
 java --version
 
+echo "+++++++ SELECT JAVA VERSION TO INSTALL (JAVA 17 REQUIRED) +++++++"
+sudo update-alternatives --config java
+
 ## INSTALLATION
 
 # Set up PostgreSQL 
@@ -71,10 +74,6 @@ postgres
 postgres
 EOF
 
-# sudo su - postgres << EOF 
-# postgres
-
-# EOF
 
 sudo -i -u postgres psql -c "alter user postgres with password 'StrongPassword';"
 echo "[DONE] - Set PostgreSQL admin user"

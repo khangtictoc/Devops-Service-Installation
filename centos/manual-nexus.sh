@@ -6,10 +6,12 @@ tar xvzf nexus-3.56.0-01-unix.tar.gz
 
 sudo chmod 777 nexus-3.56.0-01/bin/*
 
-sudo apt install java-1.8.0-openjdk -y
+sudo yum install java-1.8.0-openjdk -y
 echo "#################### JAVA 8 INSTALLATION COMPLETED ##################"
 java -version
 
+echo "+++++++ SELECT JAVA VERSION TO INSTALL (JAVA 8 REQUIRED) +++++++"
+sudo update-alternatives --config java
 
 sudo useradd nexus
 sudo passwd nexus <<EOF 

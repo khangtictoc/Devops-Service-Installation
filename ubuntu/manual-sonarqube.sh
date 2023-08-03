@@ -38,13 +38,12 @@ sudo apt -y install ./jdk-17_linux-x64_bin.deb
 echo "#################### JAVA 17 INSTALLATION COMPLETED ##################"
 java --version
 
+echo "+++++++ SELECT JAVA VERSION TO INSTALL (JAVA 17 REQUIRED) +++++++"
+sudo update-alternatives --config java
+
 ## INSTALLATION
 
 # Set up PostgreSQL 
-
-# sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-# sudo yum -y install postgresql14-server postgresql14
-# echo "[DONE] - Install PostgreSQL"
 
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -52,7 +51,7 @@ sudo apt-get update
 sudo apt-get -y install postgresql-14
 
 
-# sudo /usr/lib/postgresql/14/bin/initdb
+sudo /usr/lib/postgresql/14/bin/initdb
 sudo systemctl enable --now postgresql
 
 # Config DB

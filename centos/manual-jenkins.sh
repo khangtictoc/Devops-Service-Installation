@@ -12,6 +12,9 @@ sudo yum -y install java-11-openjdk
 echo "#################### JAVA 11 INSTALLATION COMPLETED ##################"
 java -version
 
+echo "+++++++ SELECT JAVA VERSION TO INSTALL (JAVA 11 REQUIRED) +++++++"
+sudo update-alternatives --config java
+
 sudo yum -y install jenkins
 sudo systemctl daemon-reload
 

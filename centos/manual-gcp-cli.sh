@@ -10,6 +10,7 @@ repo_gpgcheck=0
 gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOM
 
+sudo yum update -y
 sudo yum install dnf -y
 
 sudo dnf install google-cloud-cli

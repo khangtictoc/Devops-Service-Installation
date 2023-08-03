@@ -10,6 +10,9 @@ sudo apt install openjdk-8-jdk-headless -y
 echo "#################### JAVA 8 INSTALLATION COMPLETED ##################"
 java -version
 
+echo "+++++++ SELECT JAVA VERSION TO INSTALL (JAVA 8 REQUIRED) +++++++"
+sudo update-alternatives --config java
+
 sudo useradd -m -d /home/nexus nexus
 sudo passwd nexus <<EOF 
 nexus
