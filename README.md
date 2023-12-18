@@ -27,7 +27,7 @@ vagrant up centos_target_1
 Then
 
 ```bash
-vagrant up centos_target_1
+vagrant ssh centos_target_1
 ```
 
 Choose a service to install. For example: Jenkins
